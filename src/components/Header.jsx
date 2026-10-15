@@ -14,7 +14,7 @@ export default function Header() {
       >
         <img
           className="brand-logo"
-          src="${import.meta.env.BASE_URL}cost_cutters_logo_transparent.png"
+          src={import.meta.env.BASE_URL + 'cost_cutters_logo_transparent.png'}
           alt="Cost Cutters Construction"
         />
       </a>
