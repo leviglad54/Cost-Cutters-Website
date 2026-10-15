@@ -4,6 +4,7 @@ import ServiceCard from './components/ServiceCard.jsx';
 import ProjectCard from './components/ProjectCard.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import { business } from './siteData.js';
+import PhotoCarousel from './components/PhotoCarousel.jsx';
 
 function App() {
   return <>
@@ -17,9 +18,7 @@ function App() {
           <div className="hero-actions"><a className="button button-dark" href="#contact">Tell us about your project <ArrowUpRight size={17} /></a><a className="text-link" href="#projects">See the work <ArrowDown size={15} /></a></div>
           <div className="hero-note"><span className="note-line" /> <span>PERSONAL SERVICE. SOLID CRAFT.</span></div>
         </div>
-        <div className="hero-art" role="img" aria-label="Warm-toned illustration of a carpenter's workshop">
-          <div className="sun-disc" /><div className="art-window"><div className="window-cross" /></div><div className="shelf shelf-one" /><div className="shelf shelf-two" /><div className="wood-board board-one" /><div className="wood-board board-two" /><div className="tool-shape"><Hammer size={78} strokeWidth={1.2} /></div><div className="art-stamp"><span>MADE WITH</span><b>CARE</b><span>IN {new Date().getFullYear()}</span></div><span className="art-caption">FIG. 01 — THE WORKSHOP</span>
-        </div>
+        <PhotoCarousel/>
         <div className="hero-bottom"><span>CRAFTED FOR THE WAY YOU LIVE</span><span>SCROLL TO EXPLORE ↓</span></div>
       </section>
       <section className="trust-strip" aria-label="What to expect"><div><Ruler /><span>Thoughtful planning</span></div><div><Hammer /><span>Skilled hands</span></div><div><ShieldCheck /><span>Built with care</span></div></section>

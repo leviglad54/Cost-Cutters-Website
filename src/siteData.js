@@ -19,9 +19,9 @@ export const business = {
     { label: 'About', href: '#about' },
   ],
   services: [
-    { number: '01', title: 'Built-in cabinetry', description: 'Custom storage and cabinetry designed to fit your home and the way you use it.' },
-    { number: '02', title: 'Finish carpentry', description: 'The details that bring a room together: trim, doors, shelving, and careful repairs.' },
-    { number: '03', title: 'Decks & outdoor', description: 'Durable outdoor spaces built for good weather, family, and years of use.' },
+    { number: '01', title: 'Decks', description: 'Durable outdoor spaces built for good weather, family, and years of use.' },
+    { number: '02', title: 'Interior Remodels', description: 'Transform the inside of your house into what youve always dreamt of,' },
+    { number: '03', title: 'Bathrooms', description: 'Beautiful showers and complete bathroom remodels.' },
   ],
   projects: [
     { title: 'A calmer kind of kitchen', category: 'Cabinetry · Anytown', image: '', alt: 'Add a photo of a completed kitchen project' },
