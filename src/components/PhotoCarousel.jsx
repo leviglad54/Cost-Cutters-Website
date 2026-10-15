@@ -3,15 +3,15 @@ import { ArrowLeft, ArrowLeftRightIcon, ArrowRight, ChevronLeft, ChevronRight } 
 
 const photos = [
   {
-    src: {import:meta.env.BASE_URL + 'projects/deck-photo.jpeg'},
+    src: import.meta.env.BASE_URL + 'projects/deck-photo.jpeg',
     alt: 'Completed kitchen carpentry project',
   },
   {
-    src: {import:meta.env.BASE_URL + 'projects/hawg.jpeg'},
+    src: import.meta.env.BASE_URL + 'projects/hawg.jpeg',
     alt: 'Detailed finish carpentry work',
   },
   {
-    src: {import:meta.env.BASE_URL + 'projects/babies.jpeg'},
+    src: import.meta.env.BASE_URL + 'projects/babies.jpeg',
     alt: 'Completed home renovation project',
   },
 ];
