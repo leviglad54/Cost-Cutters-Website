@@ -17,12 +17,62 @@ const photos = [
     alt: 'Completed kitchen carpentry project',
   },
   {
-    src: import.meta.env.BASE_URL + 'projects/hawg.jpeg',
+    src: import.meta.env.BASE_URL + 'projects/deck1.jpeg',
     alt: 'Detailed finish carpentry work',
   },
   {
-    src: import.meta.env.BASE_URL + 'projects/babies.jpeg',
+    src: import.meta.env.BASE_URL + 'projects/br1.jpeg',
     alt: 'Completed home renovation project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/deck2.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/br2.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/deck3.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/br3.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/deck4.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/br4.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/deck5.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/deck6.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/deck7.jpeg',
+    alt: 'Completed kitchen carpentry project',
+  },
+
+  {
+    src: import.meta.env.BASE_URL + 'projects/deck-photo.jpeg',
+    alt: 'Completed kitchen carpentry project',
   },
 
   // Add more photos below this line
@@ -88,7 +138,7 @@ function PhotoCarousel() {
 
     const timer = setInterval(() => {
       setCurrent((index) => index + 1);
-    }, 6000);
+    }, 4500);
 
     return () => clearInterval(timer);
   }, [paused]);
@@ -144,7 +194,7 @@ function PhotoCarousel() {
           style={{
             transform: `translateX(-${current * 100}%)`,
             transition: transitionEnabled
-              ? 'transform 1s cubic-bezier(0.65, 0, 0.35, 1)'
+              ? 'transform 1.5s cubic-bezier(0.65, 0, 0.35, 1)'
               : 'none',
           }}
           onTransitionEnd={handleTransitionEnd}
