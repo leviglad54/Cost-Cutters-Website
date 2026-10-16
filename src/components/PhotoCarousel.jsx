@@ -1,5 +1,14 @@
+// ============================================
+// IMPORTS
+// ============================================
+
 import { useEffect, useState } from 'react';
-import { ArrowLeft, ArrowLeftRightIcon, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+
+// ============================================
+// CAROUSEL PHOTOS
+// ============================================
 
 const photos = [
   {
@@ -16,9 +25,23 @@ const photos = [
   },
 ];
 
+
+// ============================================
+// PHOTO CAROUSEL COMPONENT
+// ============================================
+
 function PhotoCarousel() {
+
+  // Current photo index
   const [current, setCurrent] = useState(0);
+
+  // Pause automatic rotation when interacting
   const [paused, setPaused] = useState(false);
+
+
+  // ==========================================
+  // NAVIGATION
+  // ==========================================
 
   function previousPhoto() {
     setCurrent((index) => (index - 1 + photos.length) % photos.length);
@@ -28,8 +51,16 @@ function PhotoCarousel() {
     setCurrent((index) => (index + 1) % photos.length);
   }
 
+
+  // ==========================================
+  // AUTOMATIC ROTATION
+  // ==========================================
+
   useEffect(() => {
-    if (paused || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (
+      paused ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
       return;
     }
 
@@ -39,6 +70,11 @@ function PhotoCarousel() {
 
     return () => clearInterval(timer);
   }, [paused]);
+
+
+  // ==========================================
+  // CAROUSEL DISPLAY
+  // ==========================================
 
   return (
     <div
@@ -53,19 +89,33 @@ function PhotoCarousel() {
         }
       }}
     >
-      <div className="carousel-image-wrap">
-        {photos.map((photo, index) => (
-          <img
-            key={photo.src}
-            src={photo.src}
-            alt={photo.alt}
-            className={`carousel-image ${index === current ? 'is-active' : ''}`}
-            aria-hidden={index !== current}
-            loading={index === 0 ? 'eager' : 'lazy'}
-          />
-        ))}
 
+      {/* Sliding image track */}
+      <div className="carousel-image-wrap">
+
+        <div
+          className="carousel-track"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+          }}
+        >
+
+          {photos.map((photo) => (
+            <img
+              key={photo.src}
+              src={photo.src}
+              alt={photo.alt}
+              className="carousel-image"
+              loading="eager"
+            />
+          ))}
+
+        </div>
+
+
+        {/* Previous and next buttons */}
         <div className="carousel-controls">
+
           <button
             type="button"
             className="carousel-arrow"
@@ -83,8 +133,11 @@ function PhotoCarousel() {
           >
             <ChevronRight size={18} />
           </button>
+
         </div>
+
       </div>
+
     </div>
   );
 }

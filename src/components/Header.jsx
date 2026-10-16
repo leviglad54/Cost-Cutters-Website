@@ -46,7 +46,7 @@ export default function Header() {
         ))}
 
         <a
-          className="nav-cta"
+          className="btn-cta"
           href="#contact"
           onClick={() => setOpen(false)}
         >
