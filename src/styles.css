@@ -1057,7 +1057,6 @@ h1 em,h2 em {
   .copyright {
     margin-left: auto;
   }
-}
 
 @media(max-width:390px) {
   .hero-actions {
