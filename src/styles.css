@@ -9,10 +9,11 @@
   text-rendering: optimizeLegibility;
   --paper: #f5f2eb;
   --ink: #252820;
-  --green: #344d3a;
+  --green: #808080;
   --orange: #c96b3c;
   --muted: #77786d;
   --line: #d8d4c9;
+  --gold: #E1A22E;
   --mono: 'DM Mono',monospace;
   --serif: 'Playfair Display',Georgia,serif;
 }
@@ -90,18 +91,34 @@ button,input,select,textarea {
 .main-nav a {
   text-decoration: none;
   font-size: 12px;
-  color: #52554c;
+  color: var(--paper);
+  transition: color 0.25s ease, transform 0.25s ease
 }
 
-.main-nav a:hover,.text-link:hover {
-  color: var(--orange);
+.main-nav a:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
 }
 
 .main-nav .nav-cta {
-  border: 1px solid var(--ink);
+  border: 2px solid var(--gold);
   padding: 12px 16px;
   color: var(--ink);
   font-weight: 600;
+  border-radius: 10px;
+  background-color: var(--gold);
+  transition: background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.main-nav .nav-cta:hover {
+  background: var(--green);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 60%);
 }
 
 .nav-cta span {
