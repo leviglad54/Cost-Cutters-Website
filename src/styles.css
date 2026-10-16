@@ -1239,7 +1239,7 @@ h1 em,h2 em {
 
 @media (max-width: 760px) {
   .hero::before {
-    background: rgba(20, 20, 20, 35%);
+    background: rgba(20, 20, 20, 60%);
   }
 }
 
