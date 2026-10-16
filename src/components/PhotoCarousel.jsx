@@ -73,14 +73,14 @@ const photos = [
   {
     src: import.meta.env.BASE_URL + 'projects/deck-photo.jpeg',
     alt: 'Completed kitchen carpentry project',
-  },
+  },];
 
   // Add more photos below this line
   // {
   //   src: import.meta.env.BASE_URL + 'projects/another-photo.jpeg',
   //   alt: 'Description of the project',
   // },
-];
+
 
 
 // ============================================
