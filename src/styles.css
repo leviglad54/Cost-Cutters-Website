@@ -883,13 +883,23 @@ h1 em,h2 em {
     border: 1px solid var(--ink);
     text-align: center;
   }
-  .hero {
-    padding: 47px 6vw 25px;
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-  .hero-copy {
-    padding-top: 0;
+
+  /* MOBILE HERO LAYOUT */
+.hero {
+  align-items: flex-start;
+}
+
+.hero-copy {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.hero-bottom {
+  justify-content: center;
+  text-align: center;
+}
+  
   }
   .hero h1 {
     font-size: clamp(57px,13vw,78px);
