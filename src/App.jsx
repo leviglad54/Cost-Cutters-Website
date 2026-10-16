@@ -97,13 +97,6 @@ function App() {
 
           {/* Hero photo carousel */}
           <PhotoCarousel />
-
-          {/* Bottom hero labels */}
-          <div className="hero-bottom">
-            <span>CRAFTED FOR THE WAY YOU LIVE</span>
-            <span>SCROLL TO EXPLORE ↓</span>
-          </div>
-
         </section>
 
 

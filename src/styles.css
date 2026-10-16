@@ -14,6 +14,12 @@
   --muted: #77786d;
   --line: #d8d4c9;
   --gold: #E1A22E;
+  /* Grayscale */
+  --ink: #252525;
+  --gray-dark: #383838;
+  --gray-medium: #777777;
+  --gray-light: #D8D8D5;
+
   --mono: 'DM Mono',monospace;
   --serif: 'Playfair Display',Georgia,serif;
  
@@ -76,7 +82,7 @@ button,input,select,textarea {
   border-bottom: 1px solid var(--line);
   position: relative;
   z-index: 5;
-  background: gray
+  background: var(--gray-dark);
 }
 
 .brand {
@@ -152,7 +158,7 @@ button,input,select,textarea {
   display: none;
   background: none;
   border: 0;
-  color: var(--ink);
+  color: var(--gold);
 }
 
 
@@ -177,7 +183,7 @@ button,input,select,textarea {
 .eyebrow {
   font: 10px var(--mono);
   letter-spacing: .13em;
-  color: var(--green);
+  color: var(--gray-light);
   text-transform: uppercase;
   margin: 0 0 20px;
 }
@@ -186,7 +192,7 @@ button,input,select,textarea {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background: var(--orange);
+  background: var(--gold);
   border-radius: 50%;
   margin-right: 7px;
 }
@@ -199,17 +205,18 @@ button,input,select,textarea {
   margin: 0;
   font-family: var(--serif);
   opacity: 1;
+  color: var(--gold);
 }
 
 h1 em,h2 em {
   font-weight: 500;
-  color: var(--green);
+  color: var(--gray-light);
 }
 
 .hero-description {
   max-width: 390px;
   line-height: 1.75;
-  color: #626359;
+  color: var(--gray-light);
   font-size: 15px;
   margin: 25px 0 28px;
 }
@@ -254,6 +261,7 @@ h1 em,h2 em {
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
+  color: var(--gold);
 }
 
 .hero-note {
@@ -263,13 +271,13 @@ h1 em,h2 em {
   margin-top: 72px;
   font: 9px var(--mono);
   letter-spacing: .1em;
-  color: var(--muted);
+  color: var(--gray-light);
 }
 
 .note-line {
   width: 35px;
   height: 1px;
-  background: var(--orange);
+  background: var(--gold);
 }
 
 .hero-art {
@@ -409,7 +417,7 @@ h1 em,h2 em {
   justify-content: space-between;
   align-self: end;
   padding-top: 34px;
-  color: #808176;
+  color: var(--gray-light);
   font: 8px var(--mono);
   letter-spacing: .12em;
 }
@@ -1080,78 +1088,140 @@ h1 em,h2 em {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgb(40 40 40 / 75%);
+  background: linear-gradient(
+    90deg,
+    rgb(20 20 20 / 85%) 0%,
+    rgb(20 20 20 / 65%) 40%,
+    rgb(20 20 20 / 25%) 75%,
+    rgb(20 20 20 / 35%) 100%);
   z-index: -1;
   pointer-events: none;
 }
 
-/* HERO PHOTO CAROUSEL */
+/* ============================================
+   HERO PHOTO CAROUSEL
+============================================ */
 
+/* Main carousel container */
 .photo-carousel {
-  height:auto;
-  min-width: auto;
   position: absolute;
   inset: 0;
   z-index: -2;
-  overflow: auto;
-  margin-top: 5px;
+  overflow: hidden;
+  margin: 0;
+  min-width: 0;
 }
 
+/* Photo viewport */
 .carousel-image-wrap {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-.carousel-image {
-  position: absolute;
-  inset: 0;
+/* Sliding track containing all photos */
+.carousel-track {
+  display: flex;
   width: 100%;
   height: 100%;
+
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+
+/* Individual photos */
+.carousel-image {
   display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+
   object-fit: cover;
   object-position: center;
-  opacity: 0;
-  transition: opacity 1.5s ease;
 }
 
-.carousel-image.is-active {
-  opacity: 1;
-}
+/* ============================================
+   CAROUSEL NAVIGATION
+============================================ */
 
+/* Navigation container */
 .carousel-controls {
   position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  inset: 0;
+  z-index: 2;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+
+  pointer-events: none;
 }
 
+/* Previous and next buttons */
 .carousel-arrow {
-  width: 200px;
-  height: 100vw;
-  display: fit-content;
+  width: 70px;
+  height: 100%;
+
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: rgba(37, 40, 32, 0.1);
-  border: 1px solid rgba(37, 40, 32, 0.1);
+
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
   cursor: pointer;
   opacity: 0;
+
+  pointer-events: auto;
+
+  transition:
+    opacity 0.25s ease,
+    background-color 0.25s ease;
 }
 
-@media (max-width: 760px) {
-  .photo-carousel {
-    height: 330px;
-    margin-top: 0;
+/* Reveal arrows when hovering over the carousel */
+.photo-carousel:hover .carousel-arrow,
+.carousel-arrow:focus-visible {
+  opacity: 1;
+}
+
+/* Subtle background when hovering over an arrow */
+.carousel-arrow:hover {
+  background-color: rgb(0 0 0 / 15%);
+}
+
+/* Keyboard focus indicator */
+.carousel-arrow:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -4px;
+}
+
+/* ============================================
+   REDUCED MOTION ACCESSIBILITY
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none;
+  }
+
+  .carousel-arrow {
+    transition: none;
   }
 }
 
-@media {
-  .carousel-image {
-    transition: ease-in-out;
+/* ============================================
+   MOBILE CAROUSEL
+============================================ */
+
+@media (max-width: 760px) {
+  .carousel-arrow {
+    opacity: 1;
+    width: 50px;
+    background-color: rgb(0 0 0 / 10%);
   }
 }

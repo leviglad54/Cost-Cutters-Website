@@ -8,6 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // ============================================
 // CAROUSEL PHOTOS
+// Add as many photos as you want here
 // ============================================
 
 const photos = [
@@ -23,6 +24,12 @@ const photos = [
     src: import.meta.env.BASE_URL + 'projects/babies.jpeg',
     alt: 'Completed home renovation project',
   },
+
+  // Add more photos below this line
+  // {
+  //   src: import.meta.env.BASE_URL + 'projects/another-photo.jpeg',
+  //   alt: 'Description of the project',
+  // },
 ];
 
 
@@ -31,24 +38,39 @@ const photos = [
 // ============================================
 
 function PhotoCarousel() {
-
-  // Current photo index
   const [current, setCurrent] = useState(0);
-
-  // Pause automatic rotation when interacting
   const [paused, setPaused] = useState(false);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
+
+  // Duplicate the first photo at the end for seamless looping
+  const slides = [...photos, photos[0]];
 
 
   // ==========================================
   // NAVIGATION
   // ==========================================
 
-  function previousPhoto() {
-    setCurrent((index) => (index - 1 + photos.length) % photos.length);
+  function nextPhoto() {
+    setCurrent((index) => index + 1);
   }
 
-  function nextPhoto() {
-    setCurrent((index) => (index + 1) % photos.length);
+  function previousPhoto() {
+    if (current === 0) {
+      // Jump to the duplicate of the last photo
+      setTransitionEnabled(false);
+      setCurrent(photos.length);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransitionEnabled(true);
+          setCurrent(photos.length - 1);
+        });
+      });
+
+      return;
+    }
+
+    setCurrent((index) => index - 1);
   }
 
 
@@ -65,11 +87,36 @@ function PhotoCarousel() {
     }
 
     const timer = setInterval(() => {
-      setCurrent((index) => (index + 1) % photos.length);
+      setCurrent((index) => index + 1);
     }, 6000);
 
     return () => clearInterval(timer);
   }, [paused]);
+
+
+  // ==========================================
+  // HANDLE THE INFINITE LOOP
+  // ==========================================
+
+  function handleTransitionEnd() {
+    if (current === photos.length) {
+      // Reached the duplicate first photo.
+      // Jump back to the real first photo without animation.
+      setTransitionEnabled(false);
+      setCurrent(0);
+    }
+  }
+
+  useEffect(() => {
+    if (!transitionEnabled) {
+      // Force the browser to recognize the transition change
+      const frame = requestAnimationFrame(() => {
+        setTransitionEnabled(true);
+      });
+
+      return () => cancelAnimationFrame(frame);
+    }
+  }, [transitionEnabled]);
 
 
   // ==========================================
@@ -89,31 +136,33 @@ function PhotoCarousel() {
         }
       }}
     >
-
-      {/* Sliding image track */}
       <div className="carousel-image-wrap">
 
+        {/* Sliding track */}
         <div
           className="carousel-track"
           style={{
             transform: `translateX(-${current * 100}%)`,
+            transition: transitionEnabled
+              ? 'transform 1s cubic-bezier(0.65, 0, 0.35, 1)'
+              : 'none',
           }}
+          onTransitionEnd={handleTransitionEnd}
         >
-
-          {photos.map((photo) => (
+          {slides.map((photo, index) => (
             <img
-              key={photo.src}
+              key={`${photo.src}-${index}`}
               src={photo.src}
-              alt={photo.alt}
+              alt={index === photos.length ? '' : photo.alt}
               className="carousel-image"
+              aria-hidden={index === photos.length}
               loading="eager"
             />
           ))}
-
         </div>
 
 
-        {/* Previous and next buttons */}
+        {/* Navigation buttons */}
         <div className="carousel-controls">
 
           <button
@@ -137,7 +186,6 @@ function PhotoCarousel() {
         </div>
 
       </div>
-
     </div>
   );
 }
