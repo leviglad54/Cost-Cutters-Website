@@ -210,31 +210,6 @@ function PhotoCarousel() {
             />
           ))}
         </div>
-
-
-        {/* Navigation buttons */}
-        <div className="carousel-controls">
-
-          <button
-            type="button"
-            className="carousel-arrow"
-            onClick={previousPhoto}
-            aria-label="Previous photo"
-          >
-            <ChevronLeft size={18} />
-          </button>
-
-          <button
-            type="button"
-            className="carousel-arrow"
-            onClick={nextPhoto}
-            aria-label="Next photo"
-          >
-            <ChevronRight size={18} />
-          </button>
-
-        </div>
-
       </div>
     </div>
   );
