@@ -910,7 +910,7 @@ h1 em,h2 em {
 
   @media (max-width: 760px) {
   .hero::before {
-    background: rgb(0 0 0 / 35%);
+    background: none;
   }
 }
   
