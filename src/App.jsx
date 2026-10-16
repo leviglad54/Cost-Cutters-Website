@@ -77,13 +77,9 @@ function App() {
                 <ArrowUpRight size={17} />
               </a>
 
-              <a
-                className="text-link"
-                href="#projects"
-              >
-                See the work
-                <ArrowDown size={15} />
-              </a>
+             <a>ClassName="btn-cta" href="tel:+17173776056"
+             <span>CALL NOW!</span>
+             </a>
 
             </div>
 
