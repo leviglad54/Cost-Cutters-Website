@@ -77,7 +77,7 @@ function App() {
                 <ArrowUpRight size={17} />
               </a>
 
-             <a>ClassName="btn-cta" href="tel:+17173776056"
+             <a Class="btn-cta" href="tel:+17173776056"
              <span>CALL NOW!</span>
              </a>
 
