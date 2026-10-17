@@ -18,6 +18,7 @@ import ContactForm from './components/ContactForm.jsx';
 import PhotoCarousel from './components/PhotoCarousel.jsx';
 
 import { business } from './siteData.js';
+import { Phone } from "lucide-react";
 
 
 // ============================================
