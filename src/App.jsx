@@ -57,7 +57,7 @@ function App() {
             </p>
 
             <h1>
-              Good work.
+              Quality
               <br />
               <em>Built to last.</em>
             </h1>
