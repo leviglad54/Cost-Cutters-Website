@@ -57,6 +57,8 @@ function App() {
               </span>Serving Franklin County, PA 
               and the surrounding area</p>
             </p>
+          
+           </div>
 
             <h1>
               Quality
