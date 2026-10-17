@@ -177,8 +177,6 @@ function PhotoCarousel() {
     <div
       className="photo-carousel"
       aria-label="Examples of our carpentry work"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) {
