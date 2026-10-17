@@ -159,6 +159,9 @@ button,input,select,textarea {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  font-family: arial;
+  font-size: smaller;
+  font-weight: 900;
 }
 
 .menu-toggle {
