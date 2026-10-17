@@ -154,6 +154,13 @@ button,input,select,textarea {
   box-shadow: none;
 }
 
+.phone-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 .menu-toggle {
   display: none;
   background: none;
