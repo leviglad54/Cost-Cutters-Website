@@ -191,7 +191,7 @@ button,input,select,textarea {
 }
 
 .eyebrow {
-  font: 10px american typewriter;
+  font: 1.9vw american typewriter;
   letter-spacing: .13em;
   color: var(--gray-light);
   text-transform: uppercase;
