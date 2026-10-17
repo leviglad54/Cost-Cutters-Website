@@ -426,7 +426,7 @@ h1 em,h2 em {
 /* Trust strip */
 .trust-strip {
   min-height: 83px;
-  background: #e9e6de;
+  background: var(--gray-dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -439,13 +439,13 @@ h1 em,h2 em {
   gap: 11px;
   align-items: center;
   font-size: 11px;
-  color: #575a50;
+  color: var(--gold);
 }
 
 .trust-strip svg {
   width: 17px;
   height: 17px;
-  color: var(--green);
+  color: var(--gold);
   stroke-width: 1.5;
 }
 
