@@ -79,7 +79,7 @@ function App() {
               </a>
 
              <a 
-               Class="btn-cta" href="tel:+17173776056">
+               Class="btn-cta phone-cta" href="tel:+17173776056">
              <span> CALL NOW </span>
                <phone size={18} strokewidth={2} />
              </a>
