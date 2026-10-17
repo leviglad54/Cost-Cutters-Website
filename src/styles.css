@@ -228,7 +228,7 @@ button,input,select,textarea {
 
 h1 em,h2 em {
   font-weight: 500;
-  color: var(--gray-light);
+  color: var(--gold);
 }
 
 .hero-description {
