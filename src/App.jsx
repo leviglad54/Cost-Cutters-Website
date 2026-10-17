@@ -52,9 +52,10 @@ function App() {
           {/* Hero text and buttons */}
           <div className="hero-copy">
 
-            <p className="eyebrow">
-              <span className="eyebrow-dot" />
-              {business.serviceArea}
+            <p class="eyebrow">
+              <span class="eyebrow-dot">
+              </span>Serving Franklin County, PA 
+              and the surrounding area</p>
             </p>
 
             <h1>
