@@ -1,3 +1,5 @@
+import { Video } from "lucide-react";
+
 /**
  * START HERE: Replace the sample business information in this file.
  * Keep the same property names when changing the content.
@@ -23,9 +25,25 @@ export const business = {
     { number: '02', title: 'Interior Remodels', description: 'Transform the inside of your house into what youve always dreamt of,' },
     { number: '03', title: 'Bathrooms', description: 'Beautiful showers and complete bathroom remodels.' },
   ],
+
   projects: [
-    { title: 'A calmer kind of kitchen', category: 'Cabinetry · Anytown', image: '', alt: 'Add a photo of a completed kitchen project' },
-    { title: 'Room to gather', category: 'Deck · Oak Hill', image: '', alt: 'Add a photo of a completed deck project' },
-    { title: 'Details make the room', category: 'Finish carpentry · Anytown', image: '', alt: 'Add a photo of a finish carpentry project' },
-  ],
+  {
+    title: 'Elevated Outdoor Living',
+    category: 'Custom Deck · Waynesboro, pa',
+    image: 'projects/deck-photo.jpeg',
+    alt: 'Big deck space with composite deck boards and black cable railing',
+  },
+  {
+    title: 'Room to gather',
+    category: 'Deck · Oak Hill',
+    image: 'projects/basement-bar.png',
+    alt: 'Add a photo of a completed deck project',
+  },
+  {
+    title: 'Details make the room',
+    category: 'Finish carpentry · Anytown',
+    video: 'projects/mike-barn.mp4',
+    alt: 'Add a photo of a finish carpentry project',
+  },
+],
 };
