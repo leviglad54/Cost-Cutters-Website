@@ -142,12 +142,12 @@ export default function ContactForm() {
       ====================================== */}
 
       <button
-        className="button button-dark"
+        className="btn-cta"
         type="submit"
         disabled={!configured}
       >
         {configured
-          ? 'Send project request'
+          ? 'Send Project Request'
           : 'Connect Formspree to enable'}
 
         <span aria-hidden="true">↗</span>

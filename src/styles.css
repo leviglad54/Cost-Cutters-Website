@@ -52,7 +52,13 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--gold);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:hover {
+  transform: translateY(-1px)
 }
 
 button,input,select,textarea {
@@ -181,8 +187,15 @@ button,input,select,textarea {
   background: none;
   border: 0;
   color: var(--gold);
+  cursor: pointer;
 }
 
+.menu-toggle:hover {
+  transform: var(--btn-cta-shadow-y);
+  transform: var(--btn-cta-hover-lift);
+  transform: translatey(-1px);
+  color: var(--gray-medium);
+}
 
 /* Hero section */
 .hero {
@@ -295,6 +308,11 @@ h1 em,h2 em {
   font-weight: 600;
   text-decoration: none;
   color: var(--gold);
+  cursor: pointer;
+}
+
+.text-link:hover {
+  transform: translateY(-2px);
 }
 
 .hero-note {

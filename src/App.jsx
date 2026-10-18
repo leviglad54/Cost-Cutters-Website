@@ -16,6 +16,7 @@ import ServiceCard from './components/ServiceCard.jsx';
 import ProjectCard from './components/ProjectCard.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import PhotoCarousel from './components/PhotoCarousel.jsx';
+import Footer from './components/Footer.jsx';
 
 import { business } from './siteData.js';
 import { Phone } from "lucide-react";
@@ -52,8 +53,8 @@ function App() {
           {/* Hero text and buttons */}
           <div className="hero-copy">
 
-            <p class="eyebrow">
-              <span class="eyebrow-dot"></span>
+            <p className="eyebrow">
+              <span className="eyebrow-dot"></span>
               Serving Franklin County, PA 
               and the surrounding area
             </p>
@@ -330,49 +331,11 @@ function App() {
 
         </section>
 
+        <Footer />
+
       </main>
-
-
-      {/* ========================================
-          FOOTER
-      ======================================== */}
-
-      <footer className="site-footer">
-
-        {/* Footer brand */}
-        <a
-          className="brand footer-brand"
-          href="#top"
-        >
-
-        <img
-          className="brand-logo"
-          src={import.meta.env.BASE_URL + 'cost_cutters_logo_transparent.png'}
-          alt="Cost Cutters Construction"
-          />
-
-        </a>
-
-
-
-        {/* Service area */}
-        <p>
-          Made with care in{' '}
-          {business.serviceArea.replace(/^Serving /, '')}.
-        </p>
-
-        {/* Back-to-top link */}
-        <a href="#top">
-          Back to top ↑
-        </a>
-
-        {/* Copyright */}
-        <small className="copyright">
-          © {new Date().getFullYear()} {business.name}
-        </small>
-
-      </footer>
-
+        
+        
     </>
   );
 }

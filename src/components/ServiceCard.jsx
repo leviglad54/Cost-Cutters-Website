@@ -23,10 +23,8 @@ export default function ServiceCard({ service }) {
       </div>  
       
           <div>
-            <a className="btn-cta">
-              <span> see our 
-                <br />
-              work</span>
+            <a className="text link">
+              <span> <u>View Gallery ↗</u> </span>
             </a>
           </div>    
 
