@@ -8,15 +8,6 @@ export default function ServiceCard({ service }) {
     <article className="service-card">
 
       {/* ======================================
-          SERVICE NUMBER
-      ====================================== */}
-
-      <span className="service-number">
-        {service.number}
-      </span>
-
-
-      {/* ======================================
           SERVICE DETAILS
       ====================================== */}
 
@@ -28,21 +19,17 @@ export default function ServiceCard({ service }) {
 
         <p>
           {service.description}
-        </p>
+        </p>  
+      </div>  
+      
+          <div>
+            <a className="btn-cta">
+              <span> see our 
+                <br />
+              work</span>
+            </a>
+          </div>    
 
-      </div>
-
-
-      {/* ======================================
-          SERVICE ARROW
-      ====================================== */}
-
-      <span
-        className="service-arrow"
-        aria-hidden="true"
-      >
-        ↗
-      </span>
 
     </article>
   );

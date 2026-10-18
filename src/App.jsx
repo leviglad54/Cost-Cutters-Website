@@ -140,21 +140,15 @@ function App() {
           <div className="section-heading">
 
             <div>
-              <p className="eyebrow">
-                WHAT WE DO
-              </p>
-
               <h2>
-                Made for your
-                <br />
-                <em>everyday.</em>
+                <em>What we do</em>
               </h2>
             </div>
 
             <p className="section-intro">
               From the first conversation to the final clean-up,
-              good work starts with listening. Here are a few
-              ways we can help.
+              great results start with good communication.
+               Here are a few examples of some of our previous work.
             </p>
 
           </div>
@@ -187,21 +181,17 @@ function App() {
           <div className="section-heading">
 
             <div>
-              <p className="eyebrow">
-                A FEW FAVORITES
-              </p>
 
               <h2>
-                Work that feels
+                Our personal
                 <br />
-                <em>like home.</em>
+                <em>favorites.</em>
               </h2>
             </div>
 
             <p className="section-intro">
-              Every project is different. These placeholders are
-              ready for real photos that show the care behind
-              the details.
+              Every job is different. Here are
+              a few of our favorite finished projects.
             </p>
 
           </div>
@@ -254,7 +244,7 @@ function App() {
             </p>
 
             <h2>
-              Good work is
+              <em>Great </em>work is
               <br />
               <em>personal.</em>
             </h2>
@@ -268,11 +258,11 @@ function App() {
             </p>
 
             <a
-              className="text-link"
-              href="#contact"
+              className="btn-cta"
+              href="tel:+17173776056"
             >
               Let's talk about yours
-              <ArrowUpRight size={16} />
+              <Phone size={18} strokeWidth={2} />
             </a>
 
           </div>
@@ -306,14 +296,10 @@ function App() {
           {/* Contact information */}
           <div className="contact-copy">
 
-            <p className="eyebrow">
-              LET’S MAKE A PLAN
-            </p>
-
             <h2>
-              What are you
+              Request an
               <br />
-              <em>imagining</em>
+              estimate<em>Today</em>
             </h2>
 
             <p>
@@ -359,19 +345,15 @@ function App() {
           href="#top"
         >
 
-          <span
-            className="brand-mark"
-            aria-hidden="true"
-          >
-            O<span>+</span>L
-          </span>
-
-          <span>
-            <strong>{business.name}</strong>
-            <small>{business.trade}</small>
-          </span>
+        <img
+          className="brand-logo"
+          src={import.meta.env.BASE_URL + 'cost_cutters_logo_transparent.png'}
+          alt="Cost Cutters Construction"
+          />
 
         </a>
+
+
 
         {/* Service area */}
         <p>
