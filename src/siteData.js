@@ -5,12 +5,12 @@
 export const business = {
   name: 'Cost Cutters',
   trade: 'Construction',
-  tagline: 'Craft built to last.',
+  tagline: 'Quality built to last.',
   description: 'Making your home improvement dreams reality.',
   phone: '(717) 377-6056',
   phoneHref: '+17173776056', // digits only, with country code
   email: 'costcuttersconstruction717@gmail.com',
-  serviceArea: 'Serving Waynesboro, PA and the surrounding area',
+  serviceArea: 'Serving Franklin County, PA and the surrounding area',
   yearsExperience: '30+',
   formspreeId: '', // Add your Formspree form ID after creating a form.
   nav: [
