@@ -592,9 +592,16 @@ h1 em,h2 em {
   aspect-ratio: 1/1;
 }
 
-.project-3 .project-video {
+.project-3 .project-image {
   background: #e2d3c0;
   aspect-ratio: 1/1;
+}
+
+.project-image {
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  height: auto !important;
+  margin-top: 50px;
 }
 
 .image-placeholder {
