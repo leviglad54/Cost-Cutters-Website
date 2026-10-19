@@ -10,7 +10,7 @@ import { galleries } from './siteData.js';
 
 function App() {
   return (
-    <BrowserRouter basename="/Cost-Cutters-Website/">
+    <BrowserRouter>
       <a className="skip-link" href="#main">
         Skip to content
       </a>
