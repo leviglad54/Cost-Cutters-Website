@@ -1,10 +1,15 @@
 
+import { Link } from 'react-router-dom';
+
     function GalleryPage({ title, description, photos }) {
   return (
     <main className="gallery-page">
       <section className="gallery-intro">
         <h1><i>{title}</i></h1>
         <p>{description}</p>
+        <Link className="btn-cta gallery-estimate-link" to="/#contact">
+          Get an estimate <span aria-hidden="true">↗</span>
+        </Link>
       </section>
 
       <section className="gallery-grid">

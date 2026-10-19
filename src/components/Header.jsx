@@ -1,15 +1,28 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { business } from '../siteData.js';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const targetId = location.hash.slice(1);
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [location.pathname, location.hash]);
 
   return (
     <header className="site-header">
-      <a
+      <Link
         className="brand"
-        href="#top"
+        to="/"
         aria-label={`${business.name} ${business.trade}, home`}
       >
         <img
@@ -17,7 +30,7 @@ export default function Header() {
           src={import.meta.env.BASE_URL + 'cost_cutters_logo_transparent.png'}
           alt="Cost Cutters Construction"
         />
-      </a>
+      </Link>
 
       <button
         className="menu-toggle"
@@ -36,22 +49,22 @@ export default function Header() {
         aria-label="Main navigation"
       >
         {business.nav.map(item => (
-          <a
+          <Link
             key={item.href}
-            href={item.href}
+            to={`/${item.href}`}
             onClick={() => setOpen(false)}
           >
             {item.label}
-          </a>
+          </Link>
         ))}
 
-        <a
+        <Link
           className="btn-cta"
-          href="#contact"
+          to="/#contact"
           onClick={() => setOpen(false)}
         >
           Get an estimate <span aria-hidden="true">↗</span>
-        </a>
+        </Link>
       </nav>
     </header>
   );

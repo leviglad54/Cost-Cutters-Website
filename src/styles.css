@@ -1316,6 +1316,10 @@ h1 em,h2 em {
   margin-bottom: 48px;
 }
 
+.gallery-estimate-link {
+  display: none;
+}
+
 .gallery-intro h1 {
   margin: 0 0 16px;
   font-size: clamp(36px, 5vw, 64px);
@@ -1351,6 +1355,18 @@ h1 em,h2 em {
 .gallery-item figcaption {
   padding-top: 12px;
   font-family: "american typewriter";
+}
+
+@media (max-width: 760px) {
+  .gallery-estimate-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: max-content;
+    margin: 16px 0 0 auto;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 650px) {
