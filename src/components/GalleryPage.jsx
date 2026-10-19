@@ -20,9 +20,7 @@ import { Link } from 'react-router-dom';
               alt={photo.alt}
               loading="lazy"
             />
-            {photo.caption && (
-              <figcaption>{photo.caption}</figcaption>
-            )}
+            
           </figure>
         ))}
       </section>
