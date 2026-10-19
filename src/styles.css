@@ -784,6 +784,12 @@ h1 em,h2 em {
   gap: 8px;
 }
 
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

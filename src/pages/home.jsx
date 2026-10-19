@@ -290,6 +290,7 @@ function Home() {
 
               <a href={`tel:${business.phoneHref}`}>
                 {business.phone}
+                <Phone size={16} strokeWidth={2}> </Phone>
               </a>
 
             </div>
