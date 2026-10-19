@@ -292,10 +292,6 @@ function Home() {
                 {business.phone}
               </a>
 
-              <a href={`mailto:${business.email}`}>
-                {business.email}
-              </a>
-
             </div>
 
           </div>

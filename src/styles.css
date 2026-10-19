@@ -646,7 +646,7 @@ h1 em,h2 em {
 .project-caption p {
   margin: 0 0 6px;
   color: var(--muted);
-  font: 9px var(--mono);
+  font: 12px "american typewriter";
   letter-spacing: .03em;
 }
 
@@ -764,8 +764,9 @@ h1 em,h2 em {
 }
 
 .contact-direct a {
-  font-size: 12px;
-  text-decoration: none;
+  font-size: 16px;
+  text-decoration: underline;
+  color: var(--gray-dark);
 }
 
 .contact-form {
