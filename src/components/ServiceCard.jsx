@@ -1,7 +1,8 @@
 // ============================================
 // SERVICE CARD COMPONENT
 // ============================================
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react" ;
+import { Link } from 'react-router-dom';
 
 export default function ServiceCard({ service }) {
 
@@ -24,10 +25,10 @@ export default function ServiceCard({ service }) {
       </div>  
       
           <div>
-            <a className="text link">
+            <Link to={service.galleryHref} className="text link">
               <span> View Gallery </span>
-              <ArrowUpRight size={17} />
-            </a>
+              <ArrowUpRight size={17}/>
+            </Link>
           </div>    
 
 
