@@ -601,8 +601,10 @@ h1 em,h2 em {
   width: 100% !important;
   aspect-ratio: 1 / 1 !important;
   height: auto !important;
+  max-height: 600px;
   margin-top: 50px;
 }
+
 
 .image-placeholder {
   width: 100%;

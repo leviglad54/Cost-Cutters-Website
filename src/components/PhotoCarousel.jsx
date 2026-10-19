@@ -14,65 +14,65 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const photos = [
   {
     src: import.meta.env.BASE_URL + 'projects/deck-photo.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Brown deck boards with black cable railing overlooking a wooded yard.',
   },
   {
     src: import.meta.env.BASE_URL + 'projects/deck1.jpeg',
-    alt: 'Detailed finish carpentry work',
+    alt: 'A deck under construction beside a hot tub, with workers assembling the wood framing.',
   },
   {
     src: import.meta.env.BASE_URL + 'projects/br1.jpeg',
-    alt: 'Completed home renovation project',
+    alt: 'Recessed shower niche lined with rectangular mosaic tile, surrounded by large stone-look tiles.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/deck2.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Deck stairs with black cable railing beside brown deck boards.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/br2.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Bathroom vanity with two sinks and mirrors, bright wall lights, and tile wainscoting.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/deck3.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'View down onto a hot tub surrounded by brown decking, stairs, and black railing.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/br3.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Tiled shower with two showerheads and two recessed mosaic niches.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/deck4.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Gray deck with white railing overlooking a backyard.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/br4.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'White walk-in tub set in a large-tile surround.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/deck5.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Light wood deck with railings beside the back of a house.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/deck6.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Gray deck with white railing and dark balusters overlooking neighboring yards.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/deck7.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Brown deck with white railing beside a house, facing a fenced yard.',
   },
 
   {
     src: import.meta.env.BASE_URL + 'projects/deck-photo.jpeg',
-    alt: 'Completed kitchen carpentry project',
+    alt: 'Brown deck boards with black cable railing overlooking a wooded yard.',
   },];
 
   // Add more photos below this line

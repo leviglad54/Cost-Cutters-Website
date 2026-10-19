@@ -34,16 +34,16 @@ export const business = {
     alt: 'Big deck space with composite deck boards and black cable railing',
   },
   {
-    title: 'Room to gather',
-    category: 'Deck · Oak Hill',
+    title: 'Room to Gather',
+    category: 'Finished Basement · Custom Bar',
     image: 'projects/basement-bar.png',
-    alt: 'Add a photo of a completed deck project',
+    alt: 'dark custom built bar with light wood top and leather bar stools in a blue painted room',
   },
   {
-    title: 'Details make the room',
-    category: 'Finish carpentry · Anytown',
+    title: 'Quality in Every Detail',
+    category: 'Custom Event Space · Historic barn',
     video: 'projects/mike-barn.mp4',
-    alt: 'Add a photo of a finish carpentry project',
+    alt: 'Custom built event space built inside a historic barn with black walls and bar and light stained wood beams and posts',
   },
 ],
 };
