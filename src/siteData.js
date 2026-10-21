@@ -14,7 +14,7 @@ export const business = {
   email: 'costcuttersconstruction717@gmail.com',
   serviceArea: 'Serving Franklin County, PA and the surrounding area',
   yearsExperience: '30+',
-  formspreeId: 'https://formspree.io/f/xbgdbavp',
+  formspreeId: 'xbgdbavp',
 
   nav: [
     { label: 'Services', href: '#services' },
